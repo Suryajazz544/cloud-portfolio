@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Surya Prakash Mulugu | Cloud Engineer Portfolio">
+    <title>Surya Prakash Mulugu | Cloud Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home"><span class="brand-logo">S</span> Surya Prakash Mulugu</a>
+      <nav id="navigation" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="https://github.com/Suryajazz544" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="nav-cta" href="#contact">Contact Me</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <div>
+            <p class="eyebrow">Cloud Infrastructure & Engineering</p>
+            <h1>Build <strong>Secure, Highly Available</strong> Cloud Systems.</h1>
+            <p class="intro">I'm Surya Prakash Mulugu, a Cloud Engineer focused on AWS infrastructure, automation, and reliable application delivery. I architect solutions that scale seamlessly and operate resiliently.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#projects">View Architecture Projects</a>
+              <a class="button secondary" href="#contact">Contact Me</a>
+            </div>
+          </div>
+          
+          <div class="architecture-diagram">
+            <div class="diagram-title">Deployment Architecture: high-availability.yaml</div>
+            <div class="diagram-box">Application Load Balancer (ALB)</div>
+            <div class="diagram-split">
+              <div class="diagram-subbox">
+                <strong>AZ-A</strong>
+                <small>EC2 Instance (Node.js)</small>
+              </div>
+              <div class="diagram-subbox">
+                <strong>AZ-B</strong>
+                <small>EC2 Instance (Node.js)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container" id="about">
+        <h2 class="section-title">About My Work</h2>
+        <p>I specialize in translating complex architectural requirements into reliable, automated infrastructure. My approach prioritizes Infrastructure as Code (IaC), zero-downtime deployments, and robust security groups to ensure that applications remain available and performant under load.</p>
+      </section>
+
+      <section class="container" id="skills">
+        <h2 class="section-title">Core Competencies</h2>
+        <div class="skill-grid">
+          <div class="skill-card">
+            <h3>AWS Compute & Networking</h3>
+            <p>VPC, EC2, Application Load Balancers, Auto Scaling Groups, IAM roles, and precise Security Group configurations.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Infrastructure as Code</h3>
+            <p>Writing declarative, parameterized AWS CloudFormation templates to provision repeatable and auditable environments.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Full-Stack Development</h3>
+            <p>Building and deploying robust backend services with Node.js and Express, connected to dynamic frontend interfaces.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Operational Excellence</h3>
+            <p>Implementing process managers (PM2), automated bootstrapping via UserData, and environment health checks.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container" id="projects">
+        <h2 class="section-title">Selected Projects</h2>
+        <div id="projects-container">
+          <p>Loading project architecture details...</p>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <h2>Ready to optimize your cloud infrastructure?</h2>
+        <p style="margin-bottom: 30px; color: var(--text-secondary);">Send me a message to discuss cloud opportunities.</p>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="How can I help you?" rows="4"></textarea>
+          </div>
+          <button type="submit" class="button primary" id="contact-submit">Send Message</button>
+          <p id="contact-status" class="contact-status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> Surya Prakash Mulugu. All rights reserved. | <a href="mailto:suryaprakashmulugu@gmail.com" style="color: #FFF; text-decoration: underline;">suryaprakashmulugu@gmail.com</a></span>
+      <span>Deployed on Amazon Web Services</span>
+    </footer>
+  </body>
+</html>
