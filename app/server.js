@@ -37,7 +37,7 @@ app.get('/api/projects', (req, res) => {
       tags: ['S3', 'LAMBDA', 'SNS', 'EC2', 'IAM'],
       description: 'An event-driven architecture where S3 object creation triggers a serverless Lambda function to process data and publish notifications via SNS. Includes an EC2 instance with an IAM instance profile for secure S3 access.',
       features: ['Automated trigger via S3 Events', 'Secure IAM Role-Based Access', 'Automated SNS Notifications'],
-      githubLink: 'https://github.com/Suryajazz544/cloud-portfolio',
+      githubLink: 'https://github.com/Suryajazz544/event-driven-architecture',
       visual: {
         type: 'architecture',
         components: ['S3 Bucket', 'Lambda', 'EC2', 'SNS Topic', 'EVENT DRIVEN']
