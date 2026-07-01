@@ -1,4 +1,4 @@
-# Highly Available Cloud Portfolio ☁️
+# Highly Available Cloud Portfolio 
 
 A professional, full-stack Node.js portfolio deployed on a highly available AWS architecture using CloudFormation. 
 
@@ -27,6 +27,10 @@ cloud-portfolio/
 │   └── server.js             # Express.js backend server and API
 ├── infrastructure/           
 │   └── high-availability.yaml # AWS CloudFormation template
+├── screenshots/             # Portfolio screenshots for README
+│   ├── portfolio-screenshot.png
+│   ├── portfolio-1-screenshot.png
+│   └── portfolio-2-screenshot.png
 └── README.md
 ```
 
@@ -64,6 +68,14 @@ To test the application locally without AWS:
    npm run dev
    ```
 4. Open your browser and visit `http://localhost:3000`.
+
+## Screenshot
+
+![Portfolio Screenshot](screenshots/portfolio-screenshot.png)
+
+![Portfolio Screenshot 1](screenshots/portfolio-1-screenshot.png)
+
+![Portfolio Screenshot 2](screenshots/portfolio-2-screenshot.png)
 
 ## Features
 - **Dynamic Frontend**: The projects section is loaded dynamically from the Express backend via REST API.
