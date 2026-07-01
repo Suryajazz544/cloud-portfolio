@@ -4,7 +4,10 @@ Description: 'Highly Available Infrastructure for a Node.js Application using VP
 Parameters:
   InstanceType:
     Type: String
-    Default: t2.micro
+    Default: t3.micro
+    AllowedValues:
+      - t3.micro
+      - t2.micro
     Description: EC2 instance type for the Node.js application.
   
   LatestAmiId:
@@ -101,9 +104,14 @@ Resources:
   EC2SecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Allow traffic from ALB to EC2 instances on port 3000
+      GroupDescription: Allow ALB traffic and SSH
       VpcId: !Ref AppVPC
       SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+
         - IpProtocol: tcp
           FromPort: 3000
           ToPort: 3000
@@ -191,6 +199,8 @@ Resources:
       MinSize: '2'
       MaxSize: '4'
       DesiredCapacity: '2'
+      HealthCheckType: ELB
+      HealthCheckGracePeriod: 300
       TargetGroupARNs:
         - !Ref ALBTargetGroup
       Tags:
